@@ -8,9 +8,9 @@ class Application
 
     if req.path.match(/items/)
 
-      item_name = req.path.split("/items/").last
+      item_name = req.path.split("/items/")[-1]
       selected_item = @@items.find do |item|
-          item.name == item_name
+      item.name == item_name
       end
 
       if selected_item != nil
